@@ -48,7 +48,7 @@ JA1RL
 1行目はヘッダ行です。差し込み印刷時の参考にして下さい。
 
 ```
-$ python3 ./callsign_to_address.py callsigns.csv
+$ python3 ./callsign_to_address.py callsigns.txt
 $ cat callsigns.txt.csv
 callsign,name,addr1,addr2,state,zipcode,country
 JQ3JUK,Masatoshi Kamagasako,番地,"Nishi-ku, Kobe-city, Hyogo",,651-xxxx,JAPAN
