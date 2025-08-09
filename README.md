@@ -56,6 +56,15 @@ JA1RL,JARL (Central Station - CHUOKYOKU) Japan Amateur Radio League,,Toshima Tok
 8K3EXPO,"Japan Amateur Radio League Special Amateur Radio Station For Expo 2025 Osaka, Kansai, Japan",,Osaka,,,JAPAN
 ```
 
+## 注意事項
+
+出力されたCSVに記載された住所が適切か、事前に確認して下さい。
+
+- 上の実行例のように、qrz.comに設定されている住所をそのまま取得します。ユーザによっては不達となる住所が設定されている可能性があります。
+- 国名(country)カラムにDXCCエンティティ名が設定されていることがあるようです。
+- QSLマネージャが設定されていることがあります。
+- SASE/SAE送付先がqrz.comの本文に記載されていることがあります。
+
 ## ToDo
 
 - エラーハンドリング
