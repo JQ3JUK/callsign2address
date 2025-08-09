@@ -4,6 +4,13 @@ import sys
 import requests
 import xml.etree.ElementTree as ET
 import csv
+from dotenv import load_dotenv
+import os
+
+# 設定情報読み込み
+load_dotenv()
+qrz_user = os.getenv("QRZ_USER")
+qrz_pass = os.getenv("QRZ_PASS")
 
 # コールサイン読み込み
 args = sys.argv
@@ -14,7 +21,7 @@ with open(args[1], 'r') as f:
 # https://www.qrz.com/page/current_spec.html
 endpoint = 'https://xmldata.qrz.com/xml/current/'
 ns = {'qrz' : 'http://xmldata.qrz.com'}
-session = requests.post(endpoint, data={'username': '[your callsign]', 'password': '********', 'agent': 'callsign2address'})
+session = requests.post(endpoint, data={'username': qrz_user, 'password': qrz_pass, 'agent': 'callsign2address'})
 root = ET.fromstring(session.text)
 key = root.find("qrz:Session", ns).find("qrz:Key", ns).text
 
